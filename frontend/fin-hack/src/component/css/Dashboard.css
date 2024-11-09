@@ -1,0 +1,164 @@
+/* Risk Dashboard CSS */
+.risk-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.user-info {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.search-header {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    gap: 10px;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.address-input {
+    width: 80%;
+    max-width: 500px;
+    height: 60px;
+    font-size: 1.5em;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.search-button {
+    padding: 20px 30px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.5em;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.risk-section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overall-risk {
+    flex: 1 1 100%;
+}
+
+.col-risk,
+.crime-risk,
+.environmental-risk,
+.sentiment-analysis {
+    flex: 1 1 calc(25% - 20px);
+}
+
+.risk-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.risk-section h2 {
+    margin: 0 0 15px;
+    font-size: 1.8em;
+    color: #333333;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.risk-level {
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 4px;
+    padding: 3px 8px;
+    display: inline-block;
+}
+
+.low-risk {
+    color: #155724;
+    background-color: #00ff00;
+}
+
+.moderate-risk {
+    color: #856404;
+    background-color: #ffff00;
+}
+
+.high-risk {
+    color: #721c24;
+    background-color: #ff0000;
+}
+
+.risk-details {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.chart-container {
+    padding: 15px 0;
+    margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+    .risk-section {
+        flex: 1 1 calc(100% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .risk-dashboard {
+        padding: 15px;
+    }
+
+    .risk-section {
+        flex: 1 1 100%;
+    }
+}
