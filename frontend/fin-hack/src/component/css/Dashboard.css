@@ -147,6 +147,25 @@
     margin-top: 15px;
 }
 
+.more-details-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px; /* Adjust text size */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  margin-top: 10px;
+  display: block;
+  margin-left: auto; /* Center align */
+  margin-right: auto; /* Center align */
+}
+
+.more-details-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
 @media (max-width: 1024px) {
     .risk-section {
         flex: 1 1 calc(100% - 20px);
