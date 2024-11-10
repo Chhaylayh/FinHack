@@ -1,49 +1,106 @@
-/* CSS for Environmental Component */
+/* General styling for the environment page */
+.environment-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
 
-.environmental-table {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  .environmental-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .environmental-table-content {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .environmental-table-content th, .environmental-table-content td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .environmental-table-content th {
-    background-color: #2196F3;
-    color: white;
-  }
-  
-  .dashboard-link {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .dashboard-button {
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .dashboard-button:hover {
-    background-color: #1e88e5;
-  }
-  
+.environment-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.environment-header h1 {
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+.environment-header p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+/* Table styling */
+.environment-table, .soil-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.environment-table th, .soil-table th,
+.environment-table td, .soil-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.environment-table th, .soil-table th {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.environment-table tr:nth-child(even), 
+.soil-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.environment-table td, .soil-table td {
+  color: #555;
+}
+
+/* Pagination controls styling */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.pagination-controls span {
+  font-size: 1em;
+  color: #333;
+}
+
+/* Dashboard button styling */
+.dashboard-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dashboard-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #2980b9;
+}

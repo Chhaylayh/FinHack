@@ -1,49 +1,90 @@
-/* CSS for Crime Rate Component */
+/* Main page styling */
+.crime-rate-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.crime-rate-table {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+/* Header styling */
+.crime-rate-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.crime-rate-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.crime-rate-header p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* Chart container styling */
+.crime-rate-chart {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crime-rate-chart h2 {
+  font-size: 1.5rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Button styling for dashboard link */
+.dashboard-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dashboard-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.dashboard-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .crime-rate-page {
+    padding: 15px;
   }
-  
-  .crime-rate-header {
-    text-align: center;
-    margin-bottom: 20px;
+
+  .crime-rate-header h1 {
+    font-size: 1.5rem;
   }
-  
-  .crime-rate-table-content {
-    width: 100%;
-    border-collapse: collapse;
+
+  .crime-rate-header p {
+    font-size: 0.9rem;
   }
-  
-  .crime-rate-table-content th, .crime-rate-table-content td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+
+  .crime-rate-chart h2 {
+    font-size: 1.3rem;
   }
-  
-  .crime-rate-table-content th {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  .dashboard-link {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
+
   .dashboard-button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
-  .dashboard-button:hover {
-    background-color: #e53935;
-  }
-  
+}
