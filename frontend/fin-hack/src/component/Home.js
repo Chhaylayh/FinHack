@@ -17,7 +17,7 @@ function Home() {
 
         if (username === hardcodedUsername && password === hardcodedPassword) {
             // Navigate to dashboard or home page after successful login
-            navigate("/dashboard");
+            navigate("/Search");
         } else {
             alert("Invalid username or password");
         }
