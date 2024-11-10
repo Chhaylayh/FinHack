@@ -17,7 +17,6 @@ body {
 /* Main container */
 .home {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fff;
@@ -34,47 +33,8 @@ body {
   width: 100%;
 }
 
-/* Left Side - Image Container */
-.home-img-container {
-  flex: 3;
-  background-image: url("../img/sample.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Content on the left */
-.home-content {
-  color: #fff;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 10%;
-}
-
-.home-content h1 {
-  font-size: 5rem;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.home-content p {
-  font-size: 2rem;
-  padding-left: 50px;
-  padding-top: 20px;
-}
-
-/* Right Container */
-.home-right-container {
+/* Left Side - Login Form Container */
+.home-left-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -160,4 +120,43 @@ body {
 .home-forgot-link span {
   color: #000;
   margin: 0 5px;
+}
+
+/* Right Side - Image Container */
+.home-img-container {
+  flex: 3;
+  background-image: url("../img/sample.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content on the right side */
+.home-content {
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10%;
+}
+
+.home-content h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.home-content p {
+  font-size: 2rem;
+  padding-left: 50px;
+  padding-top: 20px;
 }
