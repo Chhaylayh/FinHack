@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/CoL.css";
 
 function Col() {
-  // Hardcoded data for the cost of living table of contents
-  const colData = [
-    { category: "Housing", value: "Moderate" },
-    { category: "Utilities", value: "Affordable" },
-    { category: "Groceries", value: "Moderate" },
-    { category: "Transportation", value: "Affordable" },
-    { category: "Healthcare", value: "Expensive" },
-  ];
+  const [colData, setColData] = useState([]);
+
+  // Fetch the cost of living data from the API
+  useEffect(() => {
+    const fetchColData = async () => {
+      try {
+        const response = await fetch("https://zylalabs.com/api/3425/united+states+cost+of+living+api/3725/get+cities", { 
+          method: 'GET'
+        });
+        if (!response.ok) {
+          throw new Error("Failed to fetch cost of living data");
+        }
+        const data = await response.json();
+        setColData(data);
+      } catch (error) {
+        console.error("Error fetching cost of living data:", error);
+      }
+    };
+
+    fetchColData();
+  }, []);
 
   return (
     <div className="col-table">
@@ -21,22 +34,26 @@ function Col() {
       </div>
 
       {/* Table to display the Cost of Living data */}
-      <table className="col-table-content">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          {colData.map((item, index) => (
-            <tr key={index}>
-              <td>{item.category}</td>
-              <td>{item.value}</td>
+      {colData.length > 0 ? (
+        <table className="col-table-content">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Value</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {colData.map((item, index) => (
+              <tr key={index}>
+                <td>{item.category}</td>
+                <td>{item.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>Loading cost of living data...</p>
+      )}
 
       {/* Button to navigate back to the Dashboard */}
       <div className="dashboard-link">
