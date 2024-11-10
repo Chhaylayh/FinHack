@@ -1,0 +1,48 @@
+/* CSS for Sentiment Component */
+
+.sentiment-table {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .sentiment-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sentiment-table-content {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sentiment-table-content th, .sentiment-table-content td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sentiment-table-content th {
+    background-color: #FF9800;
+    color: white;
+  }
+  
+  .dashboard-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .dashboard-button {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #fb8c00;
+  }

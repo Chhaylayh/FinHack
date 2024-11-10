@@ -1,0 +1,202 @@
+/* Background and Dashboard Container */
+.background {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.risk-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Risk Section Styles */
+.risk-section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.risk-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.risk-section h2 {
+    margin: 0 0 15px;
+    font-size: 1.8em;
+    color: #333333;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Styles for Full Width and Half Width Sections */
+.overall-risk {
+    width: 100%;
+    /* Full width for Overall Risk */
+}
+
+.col-risk,
+.crime-risk,
+.environmental-risk,
+.sentiment-analysis {
+    width: calc(50% - 20px);
+    /* Half width for the other four sections */
+}
+
+/* Risk Level and Risk Value Styles */
+.risk-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.risk-level {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.low {
+    color: #28a745;
+    /* Green for low risk */
+}
+
+.moderate {
+    color: #ffc107;
+    /* Yellow for moderate risk */
+}
+
+.high {
+    color: #dc3545;
+    /* Red for high risk */
+}
+
+/* Risk Description and Additional Info */
+.risk-description {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #333;
+}
+
+.additional-info {
+    margin-top: 15px;
+}
+
+.additional-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info li {
+    margin-bottom: 5px;
+}
+
+/* More Details Button Styles */
+.more-details-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Center align */
+}
+
+.more-details-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .overall-risk {
+        width: 100%;
+    }
+
+    .col-risk,
+    .crime-risk,
+    .environmental-risk,
+    .sentiment-analysis {
+        width: calc(50% - 20px);
+        /* Keep half width for medium screen sizes */
+    }
+}
+
+@media (max-width: 768px) {
+    .risk-dashboard {
+        padding: 15px;
+    }
+
+    .overall-risk,
+    .col-risk,
+    .crime-risk,
+    .environmental-risk,
+    .sentiment-analysis {
+        width: 100%;
+        /* Full width for all sections on small screens */
+    }
+}
+
+/**** Overall Table Styling ****/
+.overall-table {
+    margin-top: 20px;
+}
+
+.overall-table h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.overall-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.overall-table th,
+.overall-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.overall-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.overall-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
