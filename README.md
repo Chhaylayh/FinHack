@@ -1,0 +1,1 @@
+This project aims to be a fundamental tool for enhancing community and individual safety by quantifying the risks associated with specific locations. Whether it's crime, environmental hazards, or cost of living, our risk calculator aims to provide transparent and accessible data to empower better decision-making.
